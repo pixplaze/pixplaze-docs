@@ -74,23 +74,44 @@
 #### Параметры:
 - **status**="[online | offline | banned | whitelisted]": str - идентификатор статуса группы игроков на сервере.
 
-#### Пример ответа
+#### Примеры ответа
 
 ```json
+/players?status=online
 [
   {
     "uuid": "069a79f4-44e9-4726-a5be-fca90e38aaf5",
     "username": "notch",
-    "icon": "...",
     "status": "online",
     "playtime": 78532
   },
   {
     "uuid": "f498513c-e8c8-4773-be26-ecfc7ed5185d",
     "username": "jeb_",
-    "icon": "...",
     "status": "online",
     "playtime": 92861
+  }
+]
+
+/players
+[
+  {
+    "uuid": "069a79f4-44e9-4726-a5be-fca90e38aaf5",
+    "username": "notch",
+    "status": "online",
+    "playtime": 78532
+  },
+  {
+    "uuid": "f498513c-e8c8-4773-be26-ecfc7ed5185d",
+    "username": "jeb_",
+    "status": "online",
+    "playtime": 92861
+  },
+  {
+    "uuid": "08ab9edc-9f72-31e0-8050-88ee2c6d6b91",
+    "username": "pazik98",
+    "status": "offline",
+    "playtime": 85427
   }
 ]
 ```
