@@ -20,7 +20,9 @@
 - **map_address**: str - адрес для доступа к интерактивной карте мира игры.
 - **online_status**=["online" | "on_maintenance"]: str - онлайн статус сервера.
 - **players**: int - количество онлайна на сервере.
-- **uptime**: int - время с последней перезагрузки сервера в секундах.\
+- **uptime**: int - время с последней перезагрузки сервера в секундах.
+- **core_name**: str - название ядра сервера.
+- **core_version**: str - версия ядра сервера.\
 *Примечание*: список полей этого метода будет дополняться в будущем.
 
 #### Примеры ответа
@@ -30,7 +32,9 @@
   "name": "Pixplaze Vanilla Server",
   "max_players": 20,
   "difficulty": "normal",
-  "map_address": "127.0.0.1:25567"
+  "map_address": "127.0.0.1:25567",
+  "core_name": "Paper",
+  "core_version": "1.18.2"
 }
 
 /server?view=status
