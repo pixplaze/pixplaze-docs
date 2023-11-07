@@ -26,8 +26,8 @@
 *Примечание*: список полей этого метода будет дополняться в будущем.
 
 #### Примеры ответа
+- /server?view=short
 ```json
-/server?view=short
 {
   "name": "Pixplaze Vanilla Server",
   "max_players": 20,
@@ -36,8 +36,10 @@
   "core_name": "Paper",
   "core_version": "1.18.2"
 }
+```
 
-/server?view=status
+- /server?view=status
+```json
 {
   "online_status": "online",
   "players": 15,
