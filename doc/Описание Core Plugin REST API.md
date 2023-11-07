@@ -14,27 +14,35 @@
 - **view**="[status | short | full]": str - вид запрашиваемого ответа. При значении `"status"` возвращает данные о состоянии сервера, а при значениях `"short"` и `"full"` его статические данные в минимальном и расширенном вариантах соответственно.
 
 #### Поля:
+- **address**: str - IP адрес сервера.
+- **api_port**: int - порт для Core REST API.
+- **primary**: bool - является ли сервер главным или единственным.
 - **name**: str - название сервера в motd.
+- **core_name**: str - название ядра сервера.
+- **core_version**: str - версия ядра сервера.
+- **minecraft_version**: str - версия Майнкрафта.
+- **map_port**: int - порт для доступа к игровой карте.
 - **max_players**: int - максимальное количество игроков на сервере.
 - **difficulty**: str - уровень сложности игры.
-- **map_address**: str - адрес для доступа к интерактивной карте мира игры.
 - **online_status**=["online" | "on_maintenance"]: str - онлайн статус сервера.
 - **players**: int - количество онлайна на сервере.
-- **uptime**: int - время с последней перезагрузки сервера в секундах.
-- **core_name**: str - название ядра сервера.
-- **core_version**: str - версия ядра сервера.\
+- **uptime**: int - время с последней перезагрузки сервера в секундах.\
 *Примечание*: список полей этого метода будет дополняться в будущем.
 
-#### Примеры ответа
+#### Примеры ответа:
 - /server?view=short
 ```json
 {
+  "address": "55.33.234.233",
+  "api_port": 25567,
+  "primary": true,
   "name": "Pixplaze Vanilla Server",
-  "max_players": 20,
-  "difficulty": "normal",
-  "map_address": "127.0.0.1:25567",
   "core_name": "Paper",
-  "core_version": "1.18.2"
+  "core_version": "git-Paper-550",
+  "minecraft_version": "1.18.2",
+  "map_port": 25568,
+  "max_players": 20,
+  "difficulty": "EASY"
 }
 ```
 
