@@ -50,7 +50,6 @@
   ]
 }
 ```
-
 - /server?view=status
 ```json
 {
@@ -150,3 +149,30 @@
 *integer* **time** (необяз.) - срок действия в секундах. Необходим только если `type=ban`.
 
 **Отложено.**
+
+## Описание модели данных сущности проекта
+```json
+{
+  "name": "Pixplaze Vanilla",
+  "description": "This\nis\nthe best!",
+  "tags": [
+    "vanilla", 
+    "no_mods", 
+    "survival"
+  ],
+  "servers": [
+    {
+      "primary": true,
+      "address": "pixplaze.com:25569",
+      "api_port": 25570,
+      "map_port": 25571,
+      "thumbnail": "0JHQu9GP0KXQvtGH0YPQmtCw0LrQsNGC0YzQltC+0YHQutCwKSkp"
+    },
+    {
+      "primary": false,
+      "address": "pixplaze.com:25580",
+      "thumbnail": "0KHQv9GP0KPQttC10J/QvtC60LDQutGD0L3QuNC7"
+    }
+  ]
+}
+```
