@@ -88,10 +88,10 @@
 #### Параметры:
 - **status**="[online | offline | banned | whitelisted]": str - идентификатор статуса группы игроков на сервере.
 
-#### Примеры ответа
+#### Примеры ответа:
 
+- /players?status=online
 ```json
-/players?status=online
 [
   {
     "uuid": "069a79f4-44e9-4726-a5be-fca90e38aaf5",
@@ -106,8 +106,9 @@
     "playtime": 92861
   }
 ]
-
-/players
+```
+- /players
+```json
 [
   {
     "uuid": "069a79f4-44e9-4726-a5be-fca90e38aaf5",
