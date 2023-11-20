@@ -49,6 +49,30 @@
   "description": "The best server!",
   "server": {
     "address": "55.33.234.233",
+    "primary": true,
+    "name": "Pixplaze Vanilla Server",
+    "thumbnail": "0JHQu9GP0KXQvtGH0YPQmtCw0LrQsNGC0YzQltC+0YHQutCwKSkp",
+    "max_players": 20,
+    "difficulty": "EASY",
+    "plugins": [
+      "PluginManager",
+      "Essentials"
+    ]
+  }
+}
+```
+
+- /server?view=full
+```json
+{
+  "name": "Pixplaze Vanilla",
+  "tags": [
+    "vanilla", "mini-games", "survival"
+  ],
+  "rating": 5,
+  "description": "The best server!",
+  "server": {
+    "address": "55.33.234.233",
     "api_port": 25567,
     "primary": true,
     "name": "Pixplaze Vanilla Server",
@@ -66,6 +90,7 @@
   }
 }
 ```
+
 - /server?view=status
 ```json
 {
