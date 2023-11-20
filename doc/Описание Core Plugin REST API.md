@@ -18,6 +18,7 @@
 - **api_port**: int - порт для Core REST API.
 - **primary**: bool - является ли сервер главным или единственным.
 - **name**: str - название сервера в motd.
+- **thumbnail**: str - закодированная в Base64 миниатюра сервера.
 - **core_name**: str - название ядра сервера.
 - **core_version**: str - версия ядра сервера.
 - **minecraft_version**: str - версия Майнкрафта.
@@ -30,24 +31,39 @@
 - **plugins**: [str] - список названий плагинов на сервере.\
 *Примечание*: список полей этого метода будет дополняться в будущем.
 
+#### Временные поля:
+- **tags**: [str] - список тегов сервера.
+- **rating**: int - рейтинг сервера.
+- **description**: str - описание сервера.\
+*Примечание*: временные теги существуют для замены данных с бекэнда. В дальнейшем они будут туда перенесены.
+
 #### Примеры ответа:
 - /server?view=short
 ```json
 {
-  "address": "55.33.234.233",
-  "api_port": 25567,
-  "primary": true,
-  "name": "Pixplaze Vanilla Server",
-  "core_name": "Paper",
-  "core_version": "git-Paper-550",
-  "minecraft_version": "1.18.2",
-  "map_port": 25568,
-  "max_players": 20,
-  "difficulty": "EASY",
-  "plugins": [
-    "PluginManager",
-    "Essentials"
-  ]
+  "name": "Pixplaze Vanilla",
+  "tags": [
+    "vanilla", "mini-games", "survival"
+  ],
+  "rating": 5,
+  "description": "The best server!",
+  "server": {
+    "address": "55.33.234.233",
+    "api_port": 25567,
+    "primary": true,
+    "name": "Pixplaze Vanilla Server",
+    "thumbnail": "0JHQu9GP0KXQvtGH0YPQmtCw0LrQsNGC0YzQltC+0YHQutCwKSkp",
+    "core_name": "Paper",
+    "core_version": "git-Paper-550",
+    "minecraft_version": "1.18.2",
+    "map_port": 25568,
+    "max_players": 20,
+    "difficulty": "EASY",
+    "plugins": [
+      "PluginManager",
+      "Essentials"
+    ]
+  }
 }
 ```
 - /server?view=status
@@ -149,30 +165,3 @@
 *integer* **time** (необяз.) - срок действия в секундах. Необходим только если `type=ban`.
 
 **Отложено.**
-
-## Описание модели данных сущности проекта
-```json
-{
-  "name": "Pixplaze Vanilla",
-  "description": "This\nis\nthe best!",
-  "tags": [
-    "vanilla", 
-    "no_mods", 
-    "survival"
-  ],
-  "servers": [
-    {
-      "primary": true,
-      "address": "pixplaze.com:25569",
-      "api_port": 25570,
-      "map_port": 25571,
-      "thumbnail": "0JHQu9GP0KXQvtGH0YPQmtCw0LrQsNGC0YzQltC+0YHQutCwKSkp"
-    },
-    {
-      "primary": false,
-      "address": "pixplaze.com:25580",
-      "thumbnail": "0KHQv9GP0KPQttC10J/QvtC60LDQutGD0L3QuNC7"
-    }
-  ]
-}
-```
